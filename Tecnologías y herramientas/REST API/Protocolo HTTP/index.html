@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>PROTOCOLO HTTP &#8212; MasterServer 1.0.0 documentation</title>
+
+    <link rel="stylesheet" href="../../../_static/material-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/notosanscjkjp.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/roboto.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/material-design-lite-1.3.0/material.indigo-pink.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_materialdesign_theme.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx_materialdesign_theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <div class="mdl-layout__header-row">
+        
+        <nav class="mdl-navigation breadcrumb">
+            <a class="mdl-navigation__link is-active">PROTOCOLO HTTP</a>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+        
+<form class="form-inline pull-sm-right" action="../../../search.html" method="get">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon"  for="waterfall-exp">
+            <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </div>
+      </div>
+      <div class="mdl-tooltip" data-mdl-for="quick-search-icon">
+      Quick search
+      </div>
+</form>
+        
+<a id="button-show-source"
+    class="mdl-button mdl-js-button mdl-button--icon"
+    href="../../../_sources/Tecnologías y herramientas/REST API/Protocolo HTTP/index.rst.txt" rel="nofollow">
+<i class="material-icons">code</i>
+</a>
+<div class="mdl-tooltip" data-mdl-for="button-show-source">
+Show Source
+</div>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row header-links">
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+      </nav>
+    </div>
+</header><header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.jpg" alt="MasterServer"/>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Introducción/index.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Tecnologías y herramientas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Lenguajes de programación/index.html">Lenguajes de programación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Lenguajes de programación/Java/index.html">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Lenguajes de programación/JavaScript/index.html">JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Frameworks de desarrollo/index.html">Frameworks de desarrollo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/index.html">Spring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Application.properties/index.html">Application.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Modelo/index.html">Modelo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Repositorio/index.html">Repositorio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Servicio/index.html">Servicio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Controlador/index.html">Controlador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Pruebas unitarias/index.html">Pruebas unitarias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/index.html">Vue.js</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Componentes/index.html">Componentes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Interpolaciones/index.html">Internacionalización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Directivas/index.html">Directivas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Propiedades computadas, observadores y métodos/index.html">Propiedades computadas, observadores y métodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Navegación/index.html">Navegación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Servicios y Vuex/index.html">Servicios y Vuex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Internacionalización/index.html">Internacionalización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Diseño de la aplicación/index.html">Diseño de la aplicación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../PostgreSQL/index.html">PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Minecraft/index.html">Minecraft</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Minecraft/Servidor/index.html">Servidor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Minecraft/Plugin/index.html">Plugin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Minecraft/Plugin/Cómo desarrollar un plugin de Minecraft/index.html">Cómo desarrollar un plugin de Minecraft</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Minecraft/Plugin/Características implementadas/index.html">Características implementadas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Otras herramientas/index.html">Otras herramientas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Git/index.html">Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Maven/index.html">Maven</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Postman/index.html">Postman</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Bibliografía/index.html">Bibliografía</a></li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+        <main class="mdl-layout__content" tabIndex="0">
+<header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../../index.html">
+              <img class="logo" src="../../../_static/logo.jpg" alt="MasterServer"/>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Introducción/index.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Tecnologías y herramientas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Lenguajes de programación/index.html">Lenguajes de programación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Lenguajes de programación/Java/index.html">Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Lenguajes de programación/JavaScript/index.html">JavaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Frameworks de desarrollo/index.html">Frameworks de desarrollo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/index.html">Spring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Application.properties/index.html">Application.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Modelo/index.html">Modelo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Repositorio/index.html">Repositorio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Servicio/index.html">Servicio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Controlador/index.html">Controlador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Spring/Pruebas unitarias/index.html">Pruebas unitarias</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/index.html">Vue.js</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Componentes/index.html">Componentes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Interpolaciones/index.html">Internacionalización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Directivas/index.html">Directivas</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Propiedades computadas, observadores y métodos/index.html">Propiedades computadas, observadores y métodos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Navegación/index.html">Navegación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Servicios y Vuex/index.html">Servicios y Vuex</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Internacionalización/index.html">Internacionalización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Frameworks de desarrollo/Vue.js/Diseño de la aplicación/index.html">Diseño de la aplicación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../PostgreSQL/index.html">PostgreSQL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Minecraft/index.html">Minecraft</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Minecraft/Servidor/index.html">Servidor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Minecraft/Plugin/index.html">Plugin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Minecraft/Plugin/Cómo desarrollar un plugin de Minecraft/index.html">Cómo desarrollar un plugin de Minecraft</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Minecraft/Plugin/Características implementadas/index.html">Características implementadas</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Otras herramientas/index.html">Otras herramientas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Git/index.html">Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Maven/index.html">Maven</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Otras herramientas/Postman/index.html">Postman</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Bibliografía/index.html">Bibliografía</a></li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+
+    <div class="document">
+        <div class="page-content">
+        
+  <div class="section" id="protocolo-http">
+<h1>PROTOCOLO HTTP<a class="headerlink" href="#protocolo-http" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line">HTTP (hypertext Transfer Protocol) es el protocolo de comunicaciones usado en la Web para intercambiar documentos HTML, archivos CSS, Javascript, imágenes y otros recursos similares. El protocolo HTTP sigue un esquema petición-respuesta en donde un navegador web, el cliente del protocolo, envía un mensaje de petición a un servidor web y, en consecuencia el servidor devuelve un mensaje de respuesta.</div>
+<div class="line"><br /></div>
+<div class="line">En este protocolo, cada mensaje de petición y de respuesta se compone de un conjunto de líneas de texto. Por ejemplo, el mensaje de petición incluye una primera línea de texto que incluye la operación (conocida como método o verbo) que desea ejecutar el cliente, un conjunto de líneas adicionales con campos de encabezado, una línea vacía que representa el final del encabezado y, opcionalmente, el texto del mensaje. Esta simplicidad en el formato de los mensajes ha facilitado el desarrollo de una gran variedad de clientes y servidores web.</div>
+<div class="line"><br /></div>
+<div class="line">Algunos de los métodos de petición más usados por este protocolo son:</div>
+</div>
+<div class="section" id="get">
+<h2>GET<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Éste método devuelve la información (en forma de entidad) asociada al recurso identificado con la URI solicitada.</div>
+<div class="line"><br /></div>
+<div class="line">Ejemplo:  GET  /players  HTTP/1.1→ Obtiene todos los jugadores.</div>
+<div class="line">Ejemplo con parámetros: GET /player?name=Federico HTTP/1.1 → Obtiene los jugares cuyo nombre es Federico.</div>
+</div>
+<p>POST
+===</p>
+<div class="line-block">
+<div class="line">Éste método es usado para que el servidor acepte la entidad enviada como parte de la petición, como un nuevo elemento del recurso asociado a la URI solicitada.</div>
+<div class="line"><br /></div>
+<div class="line">Ejemplo: POST  /player HTTP/1.1 → Crea ese jugador.</div>
+<div class="line"><br /></div>
+<div class="line">El contenido va en el body del request, no aparece nada en la URL, aunque se envía en el mismo formato que con el método GET. Se debe de indicar el Content-Type. Se suele usar en formularios html porque es más seguro que el método GET, para crear un usuario en una base de datos, etc.</div>
+</div>
+</div>
+<div class="section" id="put">
+<h2>PUT<a class="headerlink" href="#put" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Éste método es usado para que la entidad enviada como parte del request sea guardada bajo la URI solicitada. Si la entidad se refiere a un recurso ya existente, se procesa como una entidad actualizada.</div>
+<div class="line"><br /></div>
+<div class="line">Ejemplo: PUT  /player/1 HTTP/1.1 → Actualiza ese jugador.</div>
+<div class="line"><br /></div>
+<div class="line">En el body del request se tiene que indicar el contenido que se va a actualizar.</div>
+</div>
+</div>
+<div class="section" id="delete">
+<h2>DELETE<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Este método indica al servidor que el recurso identificado con la URI solicitada debe ser eliminado. Nunca lleva datos en el cuerpo.</div>
+<div class="line"><br /></div>
+<div class="line">Ejemplo: DELETE  /player/1 HTTP/1.1 → Borra ese jugador.</div>
+</div>
+</div>
+<div class="section" id="head">
+<h2>HEAD<a class="headerlink" href="#head" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Su funcionamiento es idéntico al de GET, con la excepción que no devuelve el cuerpo de la respuesta. Solo se reciben los datos del encabezado.</div>
+</div>
+</div>
+<div class="section" id="codigos-http">
+<h2>Códigos HTTP<a class="headerlink" href="#codigos-http" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases: respuestas informativas, respuestas satisfactorias, redirecciones, errores de los clientes y errores de los servidores. Nos vamos en centrar en los códigos de las respuestas satisfactorias y en los errores de los clientes más usados.</div>
+</div>
+<div class="section" id="respuestas-satisfactorias">
+<h3>Respuestas satisfactorias<a class="headerlink" href="#respuestas-satisfactorias" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ok">
+<h4>200 OK<a class="headerlink" href="#ok" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">La solicitud ha tenido éxito. El significado de un éxito varía dependiendo del método HTTP:</div>
+</div>
+<ul class="simple">
+<li>GET: El recurso se ha obtenido y se transmite en el cuerpo del mensaje.</li>
+<li>HEAD: Los encabezados de entidad están en el cuerpo del mensaje.</li>
+<li>PUT o POST: El recurso que describe el resultado de la acción se transmite en el cuerpo</li>
+</ul>
+</div>
+<div class="section" id="created">
+<h4>201 CREATED<a class="headerlink" href="#created" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">La solicitud ha tenido éxito y se ha creado un nuevo recurso como resultado de ello. Ésta es típicamente la respuesta enviada después de una petición PUT.</div>
+</div>
+</div>
+<div class="section" id="no-content">
+<h4>400 NO CONTENT<a class="headerlink" href="#no-content" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">La petición se ha completado con éxito pero su respuesta no tiene ningún contenido, aunque los encabezados pueden ser útiles. El agente de usuario puede actualizar sus encabezados en caché para este recurso con los nuevos valores.</div>
+</div>
+</div>
+</div>
+<div class="section" id="errores-de-cliente">
+<h3>Errores de cliente<a class="headerlink" href="#errores-de-cliente" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="bad-request">
+<h4>400 BAD REQUEST<a class="headerlink" href="#bad-request" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">Esta respuesta significa que el servidor no pudo interpretar la solicitud dada una sintaxis inválida.</div>
+</div>
+</div>
+<div class="section" id="unauthorized">
+<h4>401 UNAUTHORIZED<a class="headerlink" href="#unauthorized" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">Es necesario autenticar para obtener la respuesta solicitada. Esta es similar a 403, pero en este caso, autenticación es posible.</div>
+</div>
+</div>
+<div class="section" id="forbidden">
+<h4>403 FORBIDDEN<a class="headerlink" href="#forbidden" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">El cliente no posee los permisos necesarios para cierto contenido, por lo que el servidor está rechazando otorgar una respuesta apropiada.</div>
+</div>
+</div>
+<div class="section" id="not-found">
+<h4>404 NOT FOUND<a class="headerlink" href="#not-found" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">El servidor no pudo encontrar el contenido solicitado. Este código de respuesta es uno de los más famosos dada su alta ocurrencia en la web.</div>
+</div>
+</div>
+<div class="section" id="method-not-allowed">
+<h4>405 METHOD NOT ALLOWED<a class="headerlink" href="#method-not-allowed" title="Permalink to this headline">¶</a></h4>
+<div class="line-block">
+<div class="line">El método solicitado es conocido por el servidor pero ha sido deshabilitado y no puede ser utilizado. Los dos métodos obligatorios, GET y HEAD, nunca deben ser deshabilitados y no debiesen retornar este código de error.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+        </div>
+        <div class="side-doc-outline">
+            <div class="side-doc-outline--content"> 
+<div class="localtoc">
+    <p class="caption">
+      <span class="caption-text">Table Of Contents</span>
+    </p>
+    <ul>
+<li><a class="reference internal" href="#">PROTOCOLO HTTP</a><ul>
+<li><a class="reference internal" href="#get">GET</a></li>
+<li><a class="reference internal" href="#put">PUT</a></li>
+<li><a class="reference internal" href="#delete">DELETE</a></li>
+<li><a class="reference internal" href="#head">HEAD</a></li>
+<li><a class="reference internal" href="#codigos-http">Códigos HTTP</a><ul>
+<li><a class="reference internal" href="#respuestas-satisfactorias">Respuestas satisfactorias</a><ul>
+<li><a class="reference internal" href="#ok">200 OK</a></li>
+<li><a class="reference internal" href="#created">201 CREATED</a></li>
+<li><a class="reference internal" href="#no-content">400 NO CONTENT</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#errores-de-cliente">Errores de cliente</a><ul>
+<li><a class="reference internal" href="#bad-request">400 BAD REQUEST</a></li>
+<li><a class="reference internal" href="#unauthorized">401 UNAUTHORIZED</a></li>
+<li><a class="reference internal" href="#forbidden">403 FORBIDDEN</a></li>
+<li><a class="reference internal" href="#not-found">404 NOT FOUND</a></li>
+<li><a class="reference internal" href="#method-not-allowed">405 METHOD NOT ALLOWED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+            </div>
+        </div>
+
+      <div class="clearer"></div>
+    </div><div class="pagenation">
+  </div>
+        <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <div class="mdl-logo">MasterServer</div>
+      <div>
+        
+        <p class="caption"><span class="caption-text">Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../Introducción/index.html">Introducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">Tecnologías y herramientas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../Bibliografía/index.html">Bibliografía</a></li>
+</ul>
+
+      </div>
+    </div>
+
+    <div class="mdl-mini-footer__right-section">
+        <div>&copy; Copyright 2020, Efren Garcia Ferez &amp; Jose Alvarez Caba Domingo.</div>
+      <div>Generated by <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.8.5 using <a href="https://github.com/myyasuda/sphinx_materialdesign_theme">sphinx_materialdesign_theme</a>.</div>
+    </div>
+</footer>
+        </main>
+    </div>
+  </body>
+</html>
