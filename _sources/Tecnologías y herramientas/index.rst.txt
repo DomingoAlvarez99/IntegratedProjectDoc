@@ -8,8 +8,8 @@ Tecnologías y herramientas
 	
    Lenguajes de programación/index
    Frameworks de desarrollo/index
-   Entornos de desarrollo integrados (IDEs)/index
-   REST APIs/index
+   Entornos de desarrollo integrados/index
+   REST API/index
    PostgreSQL/index
    Minecraft/index
    Otras herramientas/index

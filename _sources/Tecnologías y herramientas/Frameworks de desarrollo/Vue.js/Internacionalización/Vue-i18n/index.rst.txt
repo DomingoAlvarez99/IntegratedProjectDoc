@@ -28,6 +28,7 @@ En archivos .vue
 | Se pueden añadir las traducciones en la sección <i18n>.
 
 .. code-block:: html
+
 			<i18n>
 			{
 			  "en": {

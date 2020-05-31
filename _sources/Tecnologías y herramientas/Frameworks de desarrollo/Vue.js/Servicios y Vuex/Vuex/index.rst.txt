@@ -13,7 +13,7 @@ Arquitectura
 
 .. image:: media/Vuex_life_cycle.png
    :width: 400px
-   
+   :align: center
    
 - State: Es un objeto que puede contener cualquier tipo de información y está almacenado de forma centralizada en toda la app.
 - Mutation: Son funciones que modifican el estado, son llamadas por las acciones.

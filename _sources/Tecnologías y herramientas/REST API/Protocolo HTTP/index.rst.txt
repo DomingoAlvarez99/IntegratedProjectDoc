@@ -17,7 +17,7 @@ GET
 | Ejemplo con parámetros: GET /player?name=Federico HTTP/1.1 → Obtiene los jugares cuyo nombre es Federico.
 
 POST
-===
+====
 
 | Éste método es usado para que el servidor acepte la entidad enviada como parte de la petición, como un nuevo elemento del recurso asociado a la URI solicitada.
 |

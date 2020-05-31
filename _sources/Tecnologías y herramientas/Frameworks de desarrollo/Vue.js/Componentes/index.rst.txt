@@ -31,9 +31,9 @@ Componentes
 		</style>
 
 | En la etiqueta <template> se declara el código HTML para diseñar la vista del componente, en la apliación se ha usado la librería bootstrap-vue para hacer la aplicación responsive y fontawesome para usar los iconos que nos proporciona, en este bloque podremos añadir las variables del objeto data, métodos...
-
+|
 | En la sección <script> podemos definir la lógica de la aplicación y determinar el código que queremos ejecutar durante los ciclos de vida del componente.
-
+|
 | Finalmente, en el bloque <style> añadimos los estilos CSS para personalizar el componente.
 
 Sintaxis de una plantilla Vue

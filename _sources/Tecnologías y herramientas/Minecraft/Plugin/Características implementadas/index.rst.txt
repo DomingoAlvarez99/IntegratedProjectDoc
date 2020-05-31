@@ -11,6 +11,7 @@ Mensaje de bienvenida
 
 .. image:: media/welcome.png
    :width: 400px
+   :align: center
 
 Sistema de rangos
 =================
@@ -28,7 +29,8 @@ Guardar los logros de un jugador
 
 .. image:: media/achievement_unlock.png
    :width: 400px
-
+   :align: center
+   
 Comandos
 ========
 
@@ -41,8 +43,8 @@ Comandos
 | Comprueba la latencia del jugador con el servidor.
 
 .. image:: media/ping_self.png
-   :width: 400px
-
+   :width: 225px
+   :align: center
 ---------------------
 /ping {nombre_jugador}
 ---------------------
@@ -52,7 +54,8 @@ Comandos
 | El jugador requiere tener el rango dueño.
 
 .. image:: media/ping_other.png
-   :width: 400px
+   :width: 300px
+   :align: center
    
 --------------------------
 /create warp {nombre_warp}
@@ -63,7 +66,8 @@ Comandos
 | Los jugadores con el rango miembro sólo pueden crear 1 warp mientras que los jugadores con el rango dueño pueden crear 2 warps.
 
 .. image:: media/create_warp.png
-   :width: 400px
+   :width: 300px
+   :align: center
    
 --------------------------
 /warp {nombre_warp}
@@ -73,7 +77,8 @@ Comandos
 
 .. image:: media/warp.png
    :width: 400px
-   
+   :align: center
+      
 --------------------------
 /delete warp {nombre_warp}
 --------------------------
@@ -81,8 +86,9 @@ Comandos
 | Borra un warp creado anteriormente.
 
 .. image:: media/delete_warp.png
-   :width: 400px
-
+   :width: 225px
+   :align: center
+   
 -----------
 /list warps
 -----------
@@ -90,8 +96,9 @@ Comandos
 | Muesta una lista con el nombre de los warps creados.
 
 .. image:: media/list_warps.png
-   :width: 400px
-   
+   :width: 225px
+   :align: center
+      
 ---------------------------------
 /change name color {nombre_color}
 ---------------------------------
@@ -100,11 +107,12 @@ Comandos
 
 .. image:: media/change_name_color.png
    :width: 400px
-   
+   :align: center
 |
    
 .. image:: media/change_name_color_tab.png
    :width: 400px
+   :align: center
 
 --------------------------------------------------
 /change name color {nombre_color} {nombre_jugador}
@@ -118,6 +126,7 @@ Comandos
 
 .. image:: media/list_colors.png
    :width: 400px
+   :align: center
    
 -----
 /seen
@@ -127,6 +136,7 @@ Comandos
 
 .. image:: media/seen.png
    :width: 400px
+   :align: center
 
 ----------------------
 /seen {nombre_jugador}
@@ -154,28 +164,32 @@ Comando con pocos argumentos
 ----------------------------
 
 .. image:: media/too_few.png
-   :width: 400px
-
+   :width: 300px
+   :align: center
+   
 ---------------------------------
 Comando con demasiados argumentos
 ---------------------------------
 
 .. image:: media/too_many.png
-   :width: 400px
-
+   :width: 325px
+   :align: center
+   
 ----------------------------------
 Comando con argumentos incorrectos
 ----------------------------------
 
 .. image:: media/wrong.png
-   :width: 400px
-
+   :width: 250px
+   :align: center
+   
 --------------------------------
 Si el jugador no está autorizado
 --------------------------------
 
 .. image:: media/permission.png
    :width: 400px
+   :align: center
 
 
 

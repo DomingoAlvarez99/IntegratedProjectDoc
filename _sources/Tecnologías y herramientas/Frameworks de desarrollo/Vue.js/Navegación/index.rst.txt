@@ -66,6 +66,7 @@ Formas de realizar la navegación
 | Para mostrar el contenido de la página actual, se tiene que usar el elemento <router-view>.Permite renderizar componentes dinámicos en base a una url.
 
 .. code-block:: html
+
 			<router-view/>
 			
 | La navegación se puede realizar de dos formas: al usar un elemento html, o al usar la instancia del router.
